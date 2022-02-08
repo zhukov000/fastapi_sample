@@ -1,0 +1,12 @@
+version: "3"
+services:
+  db:
+    image:  postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - $HOME/docker/volumes/postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: local
+      POSTGRES_PASSWORD: local
+      POSTGRES_DB: localdb
